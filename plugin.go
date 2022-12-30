@@ -21,12 +21,12 @@ type Empty struct{}
 type Config struct {
 	SessionID         string
 	UserID            string
-	ClientVerb        string
-	ClientArgs        []string
 	ConnectionName    string
 	ConnectionType    string
+	ConnectionEnvVars map[string]any
 	ConnectionCommand []string
-	ConnectionEnvVars []string
+	ClientArgs        []string
+	ClientVerb        string
 }
 
 type Request struct {
