@@ -21,6 +21,7 @@ type Empty struct{}
 type Config struct {
 	SessionID         string
 	UserID            string
+	Config            map[string]any
 	ConnectionName    string
 	ConnectionType    string
 	ConnectionEnvVars map[string]any
