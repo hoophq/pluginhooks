@@ -8,8 +8,16 @@ import (
 	hcplugin "github.com/hashicorp/go-plugin"
 )
 
-type Empty struct{}
+const (
+	RPCPluginMethodOnConnect RPCPluginMethod = "OnConnect"
+	RPCPluginMethodOnReceive RPCPluginMethod = "OnReceive"
+	RPCPluginMethodOnSend    RPCPluginMethod = "OnSend"
+)
 
+// RPCPluginMethod is the name of the RPC method to be called.
+// It must match exactly the name of methods in the Plugin interface
+type RPCPluginMethod string
+type Empty struct{}
 type Config struct {
 	SessionID         string
 	UserID            string
