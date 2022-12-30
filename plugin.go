@@ -25,6 +25,7 @@ type Config struct {
 	ConnectionName    string
 	ConnectionType    string
 	ConnectionEnvVars map[string]any
+	ConnectionConfig  map[string]any
 	ConnectionCommand []string
 	ClientArgs        []string
 	ClientVerb        string
