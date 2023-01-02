@@ -32,6 +32,7 @@ type Config struct {
 }
 
 type Request struct {
+	SessionID  string
 	PacketType string
 	Payload    []byte
 }
